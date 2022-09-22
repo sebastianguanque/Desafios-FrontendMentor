@@ -1,0 +1,348 @@
+/* Estilos Generales */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'League Spartan', sans-serif;
+  background-image: url('images/bg-pattern-top-mobile.svg'), url('images/bg-pattern-bottom-mobile.svg');
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+}
+
+
+/* Contenedor Principal */
+
+.contenedor {
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Parte Superior */
+
+.header {
+  margin-bottom: 30px;
+}
+.header__titulo {
+  color: hsl(300, 43%, 22%);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 64px 30px 64px;
+}
+
+.header__parrafo {
+  color: hsl(303, 10%, 53%);
+  text-align: center;
+  line-height: 25px;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 28px;
+}
+
+
+/* Estrellas */
+
+.estrellas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.estrellas__cont {
+  background-color: hsl(300, 19%, 81%);
+  border-radius: 10px;
+  margin: 8px 0;
+  width: 330px;
+  height: 80px;
+  padding: 15px;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.estrellas__img {
+  min-width: 110px;
+  margin-bottom: 10px;
+}
+
+.estrellas__texto {
+  min-width: 240px;
+  text-align: center;
+}
+
+
+
+/* Personas */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards__cont {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 10px;
+  max-width: 330px;
+  height: 250px;
+  padding: 37px;
+  margin: 16px 25px 0 24px;
+  color: hsl(300, 24%, 96%);
+  font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto;
+  grid-template-areas: "imagen titulo"
+  "parrafo parrafo";
+}
+
+.cards__img {
+  border-radius: 50%;
+  width: 50px;
+  margin-right: 20px;
+  grid-area: imagen;
+}
+
+.cards__nombre {
+  grid-area: titulo;
+  font-weight: 700;
+  
+}
+
+.cards__nombre--estado {
+  display: block;
+  color: hsl(333, 80%, 67%);
+  margin-top: 10px;
+  font-weight: lighter;
+}
+
+.cards__texto {
+  grid-area: parrafo;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 30px;
+  
+}
+
+
+/* Footer */
+
+.attribution {
+  margin-top: 20px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution__nombre {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+/* Media 375px */
+@media only screen and (min-width: 376px){
+  body {
+    background-image: url('images/bg-pattern-top-desktop.svg'), url('images/bg-pattern-bottom-desktop.svg');
+  }
+
+  .estrellas {
+    padding: 0 25px;
+  }
+  .estrellas__cont--reviews {
+    align-self: flex-start;
+  }
+
+  .estrellas__cont--report {
+    align-self: center;
+  }
+
+  .estrellas__cont--best {
+    align-self: flex-end;
+  }
+
+  .cards {
+    padding: 0 25px;
+  }
+
+  .cards__cont--colton {
+    align-self: flex-start;
+  }
+
+  .cards__cont--irene{
+    align-self: center;
+  }
+
+  .cards__cont--anne {
+    align-self: flex-end;
+  }
+}
+
+/* Media 768px */
+@media only screen and (min-width: 768px){
+
+  .estrellas__cont {
+    flex-direction: row;
+    width: 444px;
+    height: 50px;
+    justify-content: center;
+  }
+
+  .cards { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "colton irene"
+    "anne anne";
+  }
+
+  .cards__cont--colton {
+    grid-area: colton;
+  }
+
+  .cards__cont--irene{
+    grid-area: irene;
+  }
+
+  .cards__cont--anne {
+    grid-area: anne;
+    justify-self: center;
+  }
+}
+
+/* Media 1080px */
+@media only screen and (min-width: 1080px) {
+
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr auto;
+    grid-template-areas: 
+    "header estrellas"
+    "cards cards"
+    "footer footer";
+
+    margin: 120px auto;
+    max-width: 1110px;
+
+  }
+
+  .header {
+    grid-area: header;
+  }
+  .header__titulo {
+    font-size: 3.4em;
+    line-height: 1em;
+    text-align: left;
+    margin: 0;
+  }
+
+  .header__parrafo {
+    margin: 15px 0 30px 0;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 24px;
+  }
+
+
+  .estrellas {
+    grid-area: estrellas;
+  }
+
+  .cards {
+    grid-area: cards;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 120px;
+    margin-top: 50px;
+  }
+
+  .cards__cont {
+    margin: 0;
+    max-width: 330px;
+  }
+
+  .cards__texto{
+    margin-top: 0;
+    line-height: 30px;
+  }
+
+  .attribution {
+    grid-area: footer;
+    font-size: 16px;
+  }
+}
+
+/* Media 1440px */
+@media only screen and (min-width: 1440px) {
+
+  body {
+    background-size: 580px;
+  }
+
+  .contenedor{
+    margin: 14px 100px;
+    margin-top: 125px;
+    max-width: 1440px;
+  }
+
+  .header {
+    max-width: 430px;
+    margin: 0;
+  }
+
+  .header__titulo {
+    font-size: 3.4em;
+    line-height: 1em;
+    text-align: left;
+    margin: 0;
+  }
+
+  .header__parrafo {
+    margin: 15px 0 30px 0;
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 24px;
+  }
+
+  .estrellas {
+    padding: 0;
+  }
+
+  .cards {
+    padding: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .cards__cont {
+    max-width: 400px;
+    height: 320px;
+  }
+
+  .cards__img {
+    width: 80px;
+  }
+  
+  .cards__nombre {
+    font-size: 22px;
+    padding-top: 8px;
+  }
+
+  .cards__texto {
+    font-size: 20px;
+  }
+}

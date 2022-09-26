@@ -13,8 +13,8 @@ body {
   display: grid;
   place-items: center;
   margin: 5rem 1rem;
-  max-width: 956px;
-  max-height: 375px;
+  max-height: 956px;
+  max-width: 375px;
 }
 
 

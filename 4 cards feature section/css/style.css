@@ -1,0 +1,160 @@
+/* Estilos Generales */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  width: 375px;
+  height: 1360px;
+  margin: 0 auto;
+}
+
+/* Contenedor Principal */
+
+.contenedor {
+  padding: 90px 30px 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 1300px;
+}
+
+/* Header */
+
+.header {
+  text-align: center;
+}
+
+.header__titulo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: .6em;
+  width: 100%;
+}
+
+.header__titulo--none {
+  font-weight: normal;
+}
+
+.header__parrafo {
+  font-size: 1.209rem;
+  margin-bottom: 80px;
+}
+
+/* Cards */
+
+.cards {
+  border-radius: 8px;
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+  0 0  0 0 rgb(255,255,255),
+  0.3em 0.3em 1em rgba(0,0,0,0.3);
+  width: 100%;
+  height: 220px;
+
+  padding: 30px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.cards__titulo {
+  margin-bottom: .5em;
+}
+.cards__parrafo {
+  margin-bottom: 40px;
+  color: rgb(127, 125, 125);
+
+}
+
+.cards__img {
+  align-self: flex-end;
+}
+
+.cards__supervisor {
+  border-top: 2px solid rgb(0, 145, 145);
+}
+
+.cards__builder {
+  border-top: 2px solid red;
+}
+
+.cards__karma {
+  border-top: 2px solid orange;
+}
+
+.cards__calculator {
+  border-top: 2px solid blue;
+}
+
+/* Footer */
+
+.attribution {
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 1280px;
+    height: 800px;
+  }
+
+  .contenedor {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    grid-template-areas: "header header header"
+    "supervisor builder calculator"
+    "supervisor karma calculator";
+    gap: 2rem;
+  }
+
+  .header{
+    grid-area: header;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 300px;
+  }
+
+  .header__titulo {
+    font-size: 3rem;
+  }
+  .header__parrafo {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .cards__builder {
+    grid-area: builder;
+    align-self: flex-end;
+  }
+
+  .cards__calculator {
+    grid-area: calculator;
+  }
+
+  .cards__supervisor {
+    grid-area: supervisor;
+  }
+
+  .cards__karma {
+    grid-area: karma;
+    align-self: flex-start;
+  }
+  
+}

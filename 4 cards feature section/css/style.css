@@ -121,6 +121,7 @@ body {
     "supervisor builder calculator"
     "supervisor karma calculator";
     gap: 2rem;
+    padding: 0px 30px 80px;
   }
 
   .header{

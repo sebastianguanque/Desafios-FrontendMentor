@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CryptoCoin</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__titulo">
+      <h1 class="header__titulo-principal">CryptoCoin</h1>
+      <p class="header__titulo-parrafo">La proxima revolución en el intercambio de criptomonedas. <br> CryptoCoin te ayuda a navegar entre los diferentes precios y tendencias.</p>
+      <a class="header__titulo-boton" href="#planes">Conoce Nuestros Planes <span class="header__titulo-icon"></span></a>
+    </div>
+  </header>
+
+
+  <main class="contenedor">
+
+    <!-- Seccion Estadistica -->
+    <section class="contenedor__estadistica">
+      <div class="contenedor__estadistica-img"></div>
+      <h2 class="contenedor__estadistica-titulo">Visibilizamos todas las tasas de cambio.</h2>
+      <p class="contenedor__estadistica-parrafo">Traemos información en tiempo real de las casas de cambio y las monedas más importantes del mundo.</p>
+
+      <section class="table">
+        <table class="tabla">
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Gráfico</th>
+            <th>Comerciar</th>
+          </tr>
+
+          <tr>
+            <td>Bitcoin</td>
+            <td>$ 1.96</td>
+            <td><img src="./assets/iconos/trending-down.svg" alt="flecha-abajo" class="tabla__img"></td>
+            <td><button class="tabla__boton">comprar</button></td>
+          </tr>
+
+          <tr>
+            <td>Ethereum</td>
+            <td>$ 0.07</td>
+            <td><img class="tabla__img" src="./assets/iconos/trending-up.svg" alt="flecha-arriba"></td>
+            <td><button class="tabla__boton">comprar</button></td>
+          </tr>
+
+          <tr>
+            <td>Ripple</td>
+            <td>$ 2.15</td>
+            <td><img class="tabla__img" src="./assets/iconos/trending-down.svg" alt="flecha-abajo"></td>
+            <td><button class="tabla__boton">comprar</button></td>
+          </tr>
+
+          <tr>
+            <td>Stellar</td>
+            <td>$ 4.96</td>
+            <td><img class="tabla__img" src="./assets/iconos/trending-down.svg" alt="flecha-abajo"></td>
+            <td><button class="tabla__boton" >comprar</button></td>
+          </tr>
+          
+        </table>
+
+        <p class="tabla__actualizado"><span class="tabla__actualizado-bold">Actualizado</span>: 1 Enero 00:01</p> 
+      </section>
+    </section>  
+
+    <!-- Seccion Informacion -->
+    <section class="info">
+      <div class="info__text">
+        <h2 class="info__titulo">Creamos un producto sin comparación.</h2>
+        <p class="info__parrafo">Confiable y diseñado para su uso diario.</p>
+      </div>
+
+      <article class="info__card info__tiempo">
+        <img class="info__card-img" src="assets/iconos/clock.svg" alt="reloj">
+        <h4 class="info__card-titulo">Tiempo real</h4>
+        <p class="info__card-parrafo">Nuestro API toma información minuto a minuto sobre las tasas que más determinan el comportamiento.</p>
+      </article>
+
+      <article class="info__card info__tasas">
+        <img class="info__card-img" src="assets/iconos/eye.svg" alt="ojo">
+        <h4 class="info__card-titulo">No hay tasas escondidas</h4>
+        <p class="info__card-parrafo">Ni en la compra o al momento de exit, CryptoCoin siempre te muestra el costo real de lo que estás adquiriendo.</p>
+      </article>
+
+      <article class="info__card info__compara">
+        <img class="info__card-img" src="assets/iconos/dollar-sign.svg" alt="signo-dolar">
+        <h4 class="info__card-titulo">Compara monedas</h4>
+        <p class="info__card-parrafo">No más rumores, con Babtabit sabrás el valor real de cada moneda en el mercado actual.</p>
+      </article>
+
+      <article class="info__card info__confiable">
+        <img class="info__card-img" src="assets/iconos/check-circle.svg" alt=" circulo-check">
+        <h4 class="info__card-titulo">Información confiable</h4>
+        <p class="info__card-parrafo">Nuestras fuentes están 100% verificadas y continuamos auditando su contenido mientras se actualizan.</p>
+      </article>
+    </section>
+
+    <!-- Seccion Imagen -->
+    <section class="imagen">
+      <h2 class="imagen__titulo">Conócelo hoy.</h2>
+    </section>
+
+    <!-- Seccion Planes -->
+    <section id="planes" class="plan">
+      <h2 class="plan__titulo">Escoge el plan que mejor se ajuste a ti.</h2>
+      <p class="plan__parrafo">Cualquier plan te da acceso completo a nuestra plataforma.</p>
+
+
+      <div class="slider">
+        <article class="card">
+          <h3 class="card__titulo">Pago Mensual</h3>
+          <p class="card__valor"><span class="card__valor-signo">$</span> 10</p>
+          <p class="card__ahorro">*No tiene ningún tipo de ahorro.</p>
+          <button class="card__boton">Escoger este <span class="card__boton-icono"></span></button>
+        </article>
+
+        <article class="card">
+          <p class="card__recomendado">Recomendado</p>
+          <h3 class="card__titulo">Pago Anual</h3>
+          <p class="card__valor"><span class="card__valor-signo">$</span> 99</p>
+          <p class="card__ahorro">*Ahorras $20 comparado al plan mensual.</p>
+          <button class="card__boton">Escoger este <span class="card__boton-icono"></span></button>
+        </article>
+
+        <article class="card">
+          <h3 class="card__titulo">Pago Semestral</h3>
+          <p class="card__valor"><span class="card__valor-signo">$</span> 55</p>
+          <p class="card__ahorro">*Ahorras $10 comparado al plan mensual.</p>
+          <button class="card__boton">Escoger este <span class="card__boton-icono"></span></button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="footer">
+    <section class="footer__redes">
+      <a class="footer__redes-vinc" href="#">Linkedin</a>
+      <a class="footer__redes-vinc" href="#">Crunchbase</a>
+      <a class="footer__redes-vinc" href="#">Hackernews</a>
+    </section>
+    <section class="footer__logo">
+      <img class="footer__logo" src="assets/img/cryptocoin-logo.png" alt="Logo de CryptoCoin">
+    </section>
+  </footer>
+</body>
+</html>

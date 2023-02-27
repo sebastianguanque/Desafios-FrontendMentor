@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+:root {
+  --Cyan: hsl(179, 62%, 43%);
+  --CyanLight: hsla(179, 62%, 43%, 0.8);
+  --BrightYellow: hsl(71, 73%, 54%);
+  --LightGray: hsl(204, 43%, 93%);
+  --GrayishBlue: hsl(218, 22%, 67%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--LightGray);
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+  width: 310px;
+  height: 730px;
+  border-radius: 5px;
+  margin: 10px auto;
+  
+  display: grid;
+  grid-template-rows: 270px 230px 230px;
+  grid-template-areas: "join"
+  "Subs"
+  "Why";
+  overflow: hidden;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* SECCIÓN INFO */
+
+.info {
+  grid-area: join;
+  background-color: white;
+  padding: 30px 20px;
+}
+.info__titulo {
+  color: var(--Cyan);
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.info__subtitulo {
+  color: var(--BrightYellow);
+  font-size: 1em;
+  line-height: 1.3rem;
+  margin-bottom: 20px;
+}
+
+.info__parrafo {
+  color: var(--GrayishBlue);
+  line-height: 1.8rem;
+  font-size: .78rem;
+}
+
+/* SECCIÓN PLAN */
+
+.plan {
+  padding: 30px 20px;
+  background-color: var(--Cyan);
+}
+
+.plan__titulo {
+  color: #ffff;
+  margin-bottom: 20px;
+}
+    /* Plan - Precio */
+.precio {
+  font-size: 2rem;
+  display: flex;
+  gap: 14px;
+}
+
+.precio__numero {
+  color: white;
+  font-weight: 700;
+}
+
+.precio__meses {
+  font-size: .9rem;
+  color: var(--LightGray);
+  font-weight: normal;
+  align-self: center;
+}
+
+.plan__acceso {
+  color: white;
+  font-size: .9rem;
+  margin: 15px 0 30px;
+}
+
+.plan__boton {
+  width: 100%;
+  padding: 15px 0;
+  background-color: var(--BrightYellow);
+  color: white;
+  font-size: .9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+/* NOSOTROS */
+.nosotros {
+  background-color: var(--CyanLight);
+  padding: 20px 30px;
+  color: white;
+}
+
+.nosotros__titulo {
+  margin-bottom: 20px;
+}
+
+.nosotros__item {
+  list-style: none;
+  font-size: .94rem;
+  line-height: 1.2rem;
+}
+
+
+
+/* Footer */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+@media(min-width: 768px) {
+  .contenedor {
+    margin: 100px auto 30px;
+    width: 625px;
+    height: 470px;
+    grid-template-rows: 212px 258px;
+    grid-template-areas: "join join"
+    "Subs Why";
+  }
+
+  .info {
+    padding-top: 45px;
+    padding-left: 20px;
+  }
+
+  .info__subtitulo {
+    margin-bottom: 10px;
+  }
+  .info__parrafo {
+
+    font-size: 1.05rem;
+    padding-bottom: 45px;
+  }
+
+  .plan {
+    padding-top: 42px;
+  }
+  .plan__boton:hover {
+    cursor: pointer;
+  }
+
+  .nosotros {
+    padding-top: 42px;
+  }
+
+  .nosotros__item {
+    color: var(--LightGray);
+  }
+}

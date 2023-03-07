@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* Gradientes */
+  --background: hsl(252, 100%, 67%) hsl(241, 81%, 54%);
+
+  --circulo: hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0);
+  
+  /* Neutrales */
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {font-family: 'Hanken Grotesk', sans-serif;}
+
+
+/* Contenedor Principal */
+
+.contenedor {
+  width: 100%;
+  height: 800px;
+}
+
+/* Sección Resultado */
+
+.resultado {
+  height: 300px;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: var(--White);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 50px;
+}
+
+.resultado__subtitulo {
+  margin: 20px 0;
+  font-size: 1em;
+  color: var(--Light-lavender);
+}
+
+.resultado__numero {
+  border: 1px solid none;
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  background: -moz-linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 35px;
+  color: var(--Light-lavender);
+  margin-bottom: 20px;
+}
+
+.resultado__numero--grande {
+  font-size: 3em;
+  font-weight: 700;
+  color: var(--White);
+}
+
+.resultado__titulo {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.resultado__parrafo {
+  font-size: .93em;
+  color: var(--Light-lavender);
+}
+
+/* Sección Resumen */
+
+.resumen {
+  padding: 25px;
+}
+
+.resumen__titulo {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  color: var(--Dark-gray-blue);
+}
+
+.tarjeta {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 15px;
+  background-color: hsla(0, 100%, 67%, 0.1);
+  margin-bottom: 20px;
+}
+
+.tarjeta__numero--color {
+  color: gray;
+}
+
+.reaction{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Light-red);
+}
+
+.tarjetaMemory {
+  background-color: hsla(39, 100%, 56%, 0.1);;
+}
+
+.memory {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Orangey-yellow);
+}
+
+.tarjetaVerbal {
+  background-color: hsla(166, 100%, 37%, 0.1);;
+}
+
+.verbal{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Green-teal);
+}
+
+.tarjetaVisual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.visual {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--Cobalt-blue);
+}
+
+.resumen__boton {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--Dark-gray-blue);
+  color: var(--Pale-blue);
+  font-size: 1em;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-color: var(--Pale-blue);
+  }
+  .contenedor {
+    width: 460px;
+    height: 330px;
+    display: flex;
+    margin: 50px auto;
+    background-color: var(--White);
+    border-radius: 30px;
+  }
+
+  .resultado {
+    flex-basis: 50%;
+    height: 100%;
+    border-radius: 30px;
+    padding: 0 40px;
+  }
+
+  .resultado__parrafo {
+    font-size: .75em;
+    text-align: center;
+  }
+
+  .resumen {
+    flex-basis: 50%;
+  }
+
+  .resumen__titulo {
+    font-size: 1em;
+  }
+
+  .tarjeta {
+    padding: 6px;
+    margin-bottom: 10px;
+    font-size: .7em;
+    align-items: center;
+  }
+
+  .resumen__boton{
+    margin-top: 10px;
+    padding: 10px;
+    font-size: .7em;
+    font-weight: 600;
+  }
+  .resumen__boton:hover {
+    cursor: pointer;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%))
+  }
+}
+
+
+
+/* Footer */
+.attribution { font-size: 14px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }

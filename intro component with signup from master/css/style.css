@@ -1,0 +1,175 @@
+/* Estilos Generales */
+:root {
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  --Blue: hsl(248, 32%, 49%);
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-color: var(--Red);
+  color: #fff;
+  background-image: url('../images/bg-intro-mobile.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contenedor Principal */
+.container {
+  width: 100vw;
+  max-width: 550px;
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 1rem;
+}
+
+/* Sección de Información */
+.information {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.information__title {
+  font-size: 2em;
+  margin-bottom: 1.5rem;
+}
+
+.information__paragraph {
+  font-size: 1em;
+}
+
+
+/* Sección de Usuario */
+
+.offer {
+  background-color: var(--Blue);
+  padding: 1rem 4rem;
+  margin-bottom: 1rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 1px 4px rgba(0, 0, 0, 0.474);
+}
+
+.offer--bold {
+  font-weight: bold;
+}
+
+/* Form */
+
+.form {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+}
+
+.form__input {
+  width: 100%;
+  padding: 1rem;
+  margin-top: .5rem;
+  color: var(--Dark-Blue);
+  font-weight: bold;
+  border-radius: 5px;
+  border: 1px solid var(--Grayish-Blue);
+  outline: none;
+}
+
+.form__button {
+  background-color: var(--Green);
+  color: white;
+  width: 100%;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form__terms {
+  color: var(--Dark-Blue);
+  text-align: center;
+  font-size: .7em;
+}
+
+.form__terms--bold {
+  text-decoration: none;
+  color: var(--Red);
+  font-weight: bold;
+}
+
+.error {
+  position: relative;
+}
+.error__paragraph {
+  color: var(--Red);
+  font-style: italic;
+  text-align: right;
+}
+
+.error__img {
+  bottom: 40px;
+  right: 15px;
+  position: absolute;
+}
+
+/* Footer */
+.attribution {
+  font-size: 13px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    max-width: 1000px;
+    gap: 4rem;
+  }
+
+  .information {
+    text-align: left;
+    flex-basis: 50%;
+  }
+
+  .information__title {
+    font-size: 3em;
+  }
+
+  .user {
+    flex-basis: 50%;
+  }
+
+  .form {
+    padding: 2rem;
+  }
+
+  .form__input {
+    margin-top: 1rem;
+  }
+
+
+
+
+}

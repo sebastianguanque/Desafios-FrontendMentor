@@ -14,7 +14,9 @@ Users should be able to:
 
 ### Screenshot
 
+#### Desktop: 
 ![](./images/desktop-design.jpg)
+#### Mobile: 
 ![](./images/mobile-design.jpg)
 
 

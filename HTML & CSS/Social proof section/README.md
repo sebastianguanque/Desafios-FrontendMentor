@@ -13,10 +13,10 @@ Users should be able to:
 ### Screenshot
 
 #### Desktop:
-![](./images/desktop-desing.jpg)
+![](./images/desktop-design.jpg)
 
 #### Mobile:
-![](./images/mobile-desing.jpg)prefer not to add a screenshot, feel free to remove this entire section.**
+![](./images/mobile-design.jpg)
 
 ### Links
 

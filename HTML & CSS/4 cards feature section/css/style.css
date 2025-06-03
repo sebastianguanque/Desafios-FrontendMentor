@@ -4,74 +4,60 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-size: 15px;
-  width: 375px;
-  height: 1360px;
-  margin: 0 auto;
 }
 
 /* Contenedor Principal */
 
 .contenedor {
-  padding: 90px 30px 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 1300px;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1, auto);
 }
 
 /* Header */
 
 .header {
+  margin: 5rem 1rem;
   text-align: center;
 }
 
 .header__titulo {
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: .6em;
-  width: 100%;
+  margin-bottom: 0.6em;
 }
 
 .header__titulo--none {
+  font-size: 1.8rem;
+
+  display: block;
   font-weight: normal;
 }
 
 .header__parrafo {
-  font-size: 1.209rem;
-  margin-bottom: 80px;
+  font-size: 1rem;
 }
 
 /* Cards */
 
 .cards {
   border-radius: 8px;
-  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
-  0 0  0 0 rgb(255,255,255),
-  0.3em 0.3em 1em rgba(0,0,0,0.3);
-  width: 100%;
-  height: 220px;
-
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 0 rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  max-width: 300px;
   padding: 30px;
-  margin-bottom: 25px;
+  margin: 2rem;
   display: flex;
   flex-direction: column;
-  
-  
 }
 
 .cards__titulo {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 .cards__parrafo {
   margin-bottom: 40px;
   color: rgb(127, 125, 125);
-
 }
 
 .cards__img {
@@ -97,47 +83,46 @@ body {
 /* Footer */
 
 .attribution {
-  font-size: 14px; 
-  text-align: center; 
+  font-size: 14px;
+  text-align: center;
 }
-.attribution a { 
-  color: hsl(228, 45%, 44%); 
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    width: 1280px;
-    height: 800px;
-  }
-
   .contenedor {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 250px);
-    grid-template-areas: "header header header"
-    "supervisor builder calculator"
-    "supervisor karma calculator";
-    gap: 2rem;
-    padding: 0px 30px 80px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "header header"
+      "supervisor builder"
+      "karma calculator";
+    gap: 1rem;
   }
 
-  .header{
-    grid-area: header;
+  .cards {
+    max-width: max-content;
+    padding: 30px;
+    margin-bottom: 25px;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    padding: 0px 300px;
+  }
+
+  .header {
+    grid-area: header;
+    margin: 2rem;
   }
 
   .header__titulo {
-    font-size: 3rem;
+    font-size: 1.5rem;
+  }
+
+  .header__titulo--none {
+    font-size: 1.5rem;
   }
   .header__parrafo {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1rem;
   }
 
   .cards__builder {
@@ -157,5 +142,34 @@ body {
     grid-area: karma;
     align-self: flex-start;
   }
-  
+}
+
+@media screen and (min-width: 900px) {
+  .contenedor {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "header header header"
+      "supervisor builder calculator"
+      "supervisor karma calculator";
+
+    margin-bottom: 3rem;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+  }
+
+  .header__titulo {
+    font-size: 2.5rem;
+  }
+
+  .header__titulo--none {
+    font-size: 2.5rem;
+  }
+  .header__parrafo {
+    font-size: 1.2rem;
+  }
 }

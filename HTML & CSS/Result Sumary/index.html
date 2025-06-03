@@ -1,75 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/style.css">
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
 
-  <title>Frontend Mentor | Results summary component</title>
+  <body>
+    <!-- Contenedor Principal -->
+    <main class="contenedor">
+      <!-- Sección Resultado -->
+      <section class="resultado">
+        <h3 class="resultado__subtitulo">Your Result</h3>
+        <p class="resultado__numero">
+          <span class="resultado__numero--grande">76</span> of 100
+        </p>
 
-</head>
+        <h2 class="resultado__titulo">Great</h2>
+        <p class="resultado__parrafo">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
 
-<body>
-  <!-- Contenedor Principal -->
-  <main class="contenedor">
-    <!-- Sección Resultado -->
-    <section class="resultado">
+      <!-- Sección Resumen -->
+      <section class="resumen">
+        <h2 class="resumen__titulo">Summary</h2>
 
-      <h3 class="resultado__subtitulo">Your Result</h3>
-      <p class="resultado__numero"> <span class="resultado__numero--grande">76</span> of 100</p>
-
-      <h2 class="resultado__titulo">Great</h2>
-      <p class="resultado__parrafo">You scored higher than 65% of the people who have taken these tests.</p>
-
-    </section>
-
-    <!-- Sección Resumen -->
-    <section class="resumen">
-      <h2 class="resumen__titulo">Summary</h2>
-
-      <div class="tarjeta">
-
-        <div class="reaction">
-          <img src="assets/images/icon-reaction.svg" alt="Icono de Reaction" class="tarjeta__iconReaction">
-          <p class="tarjeta__reaction">Reaction</p>
+        <div class="tarjeta">
+          <div class="reaction tarjeta__titulo">
+            <img
+              src="assets/images/icon-reaction.svg"
+              alt="Icono de Reaction"
+              class="tarjeta__iconReaction"
+            />
+            <p class="tarjeta__reaction">Reaction</p>
+          </div>
+          <p class="tarjeta__numeroReaction">
+            80 <span class="tarjeta__numero--color">/ 100</span>
+          </p>
         </div>
-        <p class="tarjeta__numeroReaction">80  <span class="tarjeta__numero--color">/ 100</span></p>
-      </div>
 
-      <div class="tarjeta tarjetaMemory">
-        <div class="memory">
-          <img src="assets/images/icon-memory.svg" alt="Icono de Memory" class="tarjeta__icon">
-          <p class="tarjeta__memory">Memory</p>
+        <div class="tarjeta tarjetaMemory">
+          <div class="memory tarjeta__titulo">
+            <img
+              src="assets/images/icon-memory.svg"
+              alt="Icono de Memory"
+              class="tarjeta__icon"
+            />
+            <p class="tarjeta__memory">Memory</p>
+          </div>
+          <p class="tarjeta__numero">
+            92<span class="tarjeta__numero--color"> / 100</span>
+          </p>
         </div>
-        <p class="tarjeta__numero">92<span class="tarjeta__numero--color"> / 100</span></p>
-      </div>
-     
-      <div class="tarjeta tarjetaVerbal">
-        <div class="verbal">
-          <img src="assets/images/icon-verbal.svg" alt="Icono de Verbal" class="tarjeta__icon">
-          <p class="tarjeta__verbal">Verbal</p>
+
+        <div class="tarjeta tarjetaVerbal">
+          <div class="verbal tarjeta__titulo">
+            <img
+              src="assets/images/icon-verbal.svg"
+              alt="Icono de Verbal"
+              class="tarjeta__icon"
+            />
+            <p class="tarjeta__verbal">Verbal</p>
+          </div>
+          <p class="tarjeta__numero">
+            61 <span class="tarjeta__numero--color">/ 100</span>
+          </p>
         </div>
-        <p class="tarjeta__numero">61 <span class="tarjeta__numero--color">/ 100</span></p>
-      </div>
-        
+
         <div class="tarjeta tarjetaVisual">
-          <div class="visual">
-            <img src="assets/images/icon-visual.svg" alt="Icono de Visual" class="tarjeta__icon">
+          <div class="visual tarjeta__titulo">
+            <img
+              src="assets/images/icon-visual.svg"
+              alt="Icono de Visual"
+              class="tarjeta__icon"
+            />
             <p class="tarjeta__visual">Visual</p>
           </div>
-          <p class="tarjeta__numero">72 <span class="tarjeta__numero--color">/ 100</span></p> 
+          <p class="tarjeta__numero">
+            72 <span class="tarjeta__numero--color">/ 100</span>
+          </p>
         </div>
 
-      <button class="resumen__boton" type="submit">Continue</button>
-    </section>
-  </main>
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="https://github.com/sebastianguanque" target="_blank">Guanque Sebastián</a>.
-  </footer>
-</body>
-
+        <button class="resumen__boton" type="submit">Continue</button>
+      </section>
+    </main>
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://github.com/sebastianguanque" target="_blank"
+        >Guanque Sebastián</a
+      >.
+    </footer>
+  </body>
 </html>

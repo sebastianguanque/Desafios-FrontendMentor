@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
 
 :root {
   --Cyan: hsl(179, 62%, 43%);
@@ -17,23 +17,33 @@
 body {
   background-color: var(--LightGray);
   font-size: 16px;
-  font-family: 'Karla', sans-serif;;
+  font-family: "Karla", sans-serif;
 }
 
 /* CONTENEDOR PRINCIPAL */
 .contenedor {
-  width: 310px;
-  height: 730px;
+  max-width: 310px;
+  min-height: auto;
   border-radius: 5px;
   margin: 10px auto;
-  
+
   display: grid;
-  grid-template-rows: 270px 230px 230px;
-  grid-template-areas: "join"
-  "Subs"
-  "Why";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "join"
+    "Subs"
+    "Why";
   overflow: hidden;
   box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Secciones */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px 30px;
 }
 
 /* SECCIÓN INFO */
@@ -41,7 +51,6 @@ body {
 .info {
   grid-area: join;
   background-color: white;
-  padding: 30px 20px;
 }
 .info__titulo {
   color: var(--Cyan);
@@ -59,13 +68,12 @@ body {
 .info__parrafo {
   color: var(--GrayishBlue);
   line-height: 1.8rem;
-  font-size: .78rem;
+  font-size: 0.78rem;
 }
 
 /* SECCIÓN PLAN */
 
 .plan {
-  padding: 30px 20px;
   background-color: var(--Cyan);
 }
 
@@ -73,7 +81,7 @@ body {
   color: #ffff;
   margin-bottom: 20px;
 }
-    /* Plan - Precio */
+/* Plan - Precio */
 .precio {
   font-size: 2rem;
   display: flex;
@@ -86,7 +94,7 @@ body {
 }
 
 .precio__meses {
-  font-size: .9rem;
+  font-size: 0.9rem;
   color: var(--LightGray);
   font-weight: normal;
   align-self: center;
@@ -94,7 +102,7 @@ body {
 
 .plan__acceso {
   color: white;
-  font-size: .9rem;
+  font-size: 0.9rem;
   margin: 15px 0 30px;
 }
 
@@ -103,18 +111,17 @@ body {
   padding: 15px 0;
   background-color: var(--BrightYellow);
   color: white;
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 700;
   border: none;
   border-radius: 5px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
-
 
 /* NOSOTROS */
 .nosotros {
   background-color: var(--CyanLight);
-  padding: 20px 30px;
   color: white;
 }
 
@@ -124,38 +131,37 @@ body {
 
 .nosotros__item {
   list-style: none;
-  font-size: .94rem;
+  font-size: 0.94rem;
   line-height: 1.2rem;
 }
 
-
-
 /* Footer */
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
 
-
-
-@media(min-width: 768px) {
+@media (min-width: 768px) {
   .contenedor {
-    margin: 100px auto 30px;
-    width: 625px;
-    height: 470px;
-    grid-template-rows: 212px 258px;
-    grid-template-areas: "join join"
-    "Subs Why";
+    margin: 40px auto 30px;
+    max-width: 700px;
+    height: auto;
+    grid-template-rows: 200px 1fr;
+    grid-template-areas:
+      "join join"
+      "Subs Why";
   }
-
   .info {
-    padding-top: 45px;
-    padding-left: 20px;
+    padding-top: 60px;
   }
 
   .info__subtitulo {
     margin-bottom: 10px;
   }
   .info__parrafo {
-
     font-size: 1.05rem;
     padding-bottom: 45px;
   }

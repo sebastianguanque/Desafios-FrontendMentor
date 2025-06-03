@@ -11,7 +11,12 @@
 
 body {
   font-size: 15px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
+  background-image: url("../images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  background-color: var(--Violet);
 }
 
 /* Contenedor Principal */
@@ -19,11 +24,7 @@ body {
 .contenedor {
   width: 100%;
   height: auto;
-  background-image: url('../images/bg-mobile.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top;
-  background-color: var(--Violet);
+
   display: flex;
   flex-direction: column;
 }
@@ -74,17 +75,17 @@ body {
 }
 
 .info__parrafo {
-  font-size: .97rem;
+  font-size: 0.97rem;
   line-height: 1.6rem;
   text-align: center;
   margin-bottom: 20px;
 }
 
-
 .info__boton {
   width: 180px;
   padding: 10px 64px;
-  color: var(--Soft-Magenta);
+  color: var(--Violet);
+  font-weight: 500;
   background-color: #ffff;
   border-radius: 20px;
   border: none;
@@ -102,7 +103,6 @@ body {
 .media__boton {
   width: 30px;
   height: 30px;
- 
   color: white;
   border: 1px solid white;
   border-radius: 50%;
@@ -119,14 +119,22 @@ body {
 }
 
 /* Footer */
-.attribution { font-size: 14px; text-align: center; }
-.attribution a { color: var(--Violet); }
-
+.attribution {
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: #ffff;
+}
 
 @media (min-width: 900px) {
-  .contenedor {
-    background-image: url('../images/bg-desktop.svg');
+  body {
+    background-image: url("../images/bg-desktop.svg");
     background-size: cover;
+    background-position: center;
+  }
+
+  .contenedor {
     width: 830px;
     height: 460px;
     flex-direction: row;
@@ -150,15 +158,15 @@ body {
   }
 
   .info__parrafo {
-    font-size: .67rem;
+    font-size: 0.67rem;
     text-align: left;
     line-height: 1.2rem;
   }
 
   .info__boton {
-    width: 100px;
+    width: 120px;
     padding: 10px 30px;
-    
+    text-align: center;
   }
 
   .info__boton:hover {
@@ -175,6 +183,4 @@ body {
     cursor: pointer;
     border-color: var(--Soft-Magenta);
   }
-
-
 }

@@ -3,7 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 :root {
   --Blue: hsl(223, 87%, 63%);
@@ -13,17 +14,16 @@
   --Very-Dark-Blue: hsl(209, 33%, 12%);
 }
 
-
 /* Contenedor Principal */
 .container {
   max-width: 375px;
-  margin: 50px auto;
+  margin: 0 auto;
   padding: 20px;
 }
 
 .container__logo {
   width: 80px;
-  margin: 50px auto;
+  margin: 0 auto;
   display: block;
 }
 
@@ -45,7 +45,7 @@
   color: var(--Very-Dark-Blue);
   font-size: 1em;
   font-weight: 600;
-  margin-bottom: 2.5em;
+  margin-bottom: 1rem;
 }
 
 /* Formulario */
@@ -69,7 +69,7 @@
   color: var(--Light-Red);
   font-style: italic;
   text-align: center;
-  font: .5em;
+  font: 0.5em;
   visibility: hidden;
 }
 
@@ -90,7 +90,7 @@
 
 .container__img {
   width: 100%;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 
 /* Iconos */
@@ -121,7 +121,7 @@
 .copy {
   text-align: center;
   color: var(--Gray);
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 /* Footer */
@@ -137,17 +137,16 @@
   color: hsl(228, 45%, 44%);
 }
 
-
 /* DESKTOP */
 
-@media(min-width: 720px) {
+@media (min-width: 720px) {
   .container {
     max-width: 700px;
     padding: 50px;
   }
   .container__logo {
     width: 100px;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
   }
 
   .container__title {
@@ -170,9 +169,8 @@
   }
   .email__paragraph {
     text-align: left;
-  
+
     padding-left: 20px;
-    
   }
   .input {
     flex-basis: 25%;

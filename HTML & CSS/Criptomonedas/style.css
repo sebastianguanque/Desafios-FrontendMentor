@@ -8,15 +8,15 @@
 
 :root {
   /* Colores */
-  --bitcoin-orange: #F7931A;
-  --soft-orange: #FFE9D5;
-  --azul-sec: #1A9AF7;
-  --soft-blue: #E7F5FF;
-  --black-princ: #201E1C;
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --azul-sec: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --black-princ: #201e1c;
   --black-sec: #282623;
-  --grey: #BABABA;
-  --off-white: #FAF8F7; 
-  --just-white: #FFFFFF;
+  --grey: #bababa;
+  --off-white: #faf8f7;
+  --just-white: #ffffff;
 }
 
 /* ESTILOS GENERALES */
@@ -30,7 +30,7 @@
 
 html {
   font-size: 63.5%;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
 /* HEADER */
@@ -45,13 +45,14 @@ html {
   min-width: 320px;
   height: 334px;
   text-align: center;
-  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)), url('assets/img/portada.jfif');
+  background: linear-gradient(rgba(5, 7, 12, 0.6), rgba(5, 7, 12, 0.6)),
+    url("assets/img/portada.jpg");
+  background-color: var(--black-princ);
+  background-attachment: fixed;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
 }
-
-
 
 .header__titulo {
   width: 90%;
@@ -61,7 +62,6 @@ html {
   margin-top: 40px;
   text-align: center;
   align-self: center;
-  
 }
 
 .header__titulo-principal {
@@ -70,7 +70,6 @@ html {
   line-height: 2.6rem;
   color: var(--just-white);
 }
-
 
 .header__titulo-parrafo {
   margin-top: 25px;
@@ -105,7 +104,7 @@ html {
   width: 13px;
   height: 8px;
   margin-left: 10px;
-  background-image: url('./assets/iconos/Vector.svg');
+  background-image: url("./assets/iconos/Vector.svg");
 }
 
 /* CONTENEDOR PRINCIPAL */
@@ -115,8 +114,6 @@ html {
   height: auto;
   background-color: var(--off-white);
 }
-
-
 
 /* SECCIONES */
 
@@ -129,8 +126,8 @@ html {
 }
 
 .contenedor__estadistica-img {
-  background-image: url('./assets/img/bitcoin.svg');
-  content: '';
+  background-image: url("./assets/img/bitcoin.svg");
+  content: "";
   width: 200px;
   height: 200px;
   margin: 0 auto;
@@ -160,19 +157,18 @@ html {
   color: #757575;
 }
 
-
 .tabla {
   width: 100%;
   font-size: clamp(1rem, 1.2rem, 3rem);
 }
 
 .tabla__boton {
-  padding: .3rem 1rem;
+  padding: 0.3rem 1rem;
   background-color: rgb(251, 202, 111);
   border: none;
   border-radius: 10px;
   margin-bottom: 10px;
-  color: #201E1C;
+  color: #201e1c;
 }
 .tabla__boton:hover {
   background-color: rgb(231, 190, 60);
@@ -190,10 +186,9 @@ html {
   left: 35vw;
 }
 
-.tabla__actualizado-bold{
+.tabla__actualizado-bold {
   font-weight: bold;
 }
-
 
 /* INFORMACION */
 
@@ -255,10 +250,10 @@ html {
   width: 100%;
   min-width: 320px;
   height: 50vh;
-  background-image: url('assets/img/bitcoinbaby.svg');
+  background-image: url("assets/img/bitcoinbaby.avif");
   background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
   text-align: center;
 }
 
@@ -268,7 +263,6 @@ html {
   font-weight: bold;
   line-height: 2.6rem;
   color: var(--just-white);
-
 }
 
 /* Seccion Planes */
@@ -280,7 +274,7 @@ html {
   text-align: center;
 }
 
-.plan__titulo{
+.plan__titulo {
   width: 90%;
   min-width: 288px;
   height: auto;
@@ -391,10 +385,9 @@ html {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url('assets/iconos/arrow-right-1.svg');
+  background-image: url("assets/iconos/arrow-right-1.svg");
   vertical-align: text-bottom;
 }
-
 
 /* FOOTER */
 
@@ -402,7 +395,7 @@ html {
   display: flex;
   width: 100%;
   height: 150px;
-  background-color: var(--black-princ)
+  background-color: var(--black-princ);
 }
 
 .footer__redes {
@@ -411,10 +404,9 @@ html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
-.footer__redes-vinc{
+.footer__redes-vinc {
   text-decoration: none;
   color: var(--just-white);
   font-size: 1.4rem;
@@ -430,9 +422,7 @@ html {
   align-items: center;
 }
 
-
-@media screen and (min-width:678px ) {
-
+@media screen and (min-width: 678px) {
   .header__titulo-principal {
     font-size: 4rem;
   }
@@ -461,7 +451,6 @@ html {
 
   .tabla__actualizado {
     font-size: 1.4rem;
-    
   }
 
   .imagen__titulo {
@@ -472,14 +461,15 @@ html {
   }
 }
 
-@media screen and (min-width:1024px ) {
+@media screen and (min-width: 1024px) {
   .contenedor__estadistica {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "img titulo"
-    "img parrafo"
-    "tabla tabla";
+    grid-template-areas:
+      "img titulo"
+      "img parrafo"
+      "tabla tabla";
   }
 
   .contenedor__estadistica-img {
@@ -504,14 +494,14 @@ html {
     grid-area: tabla;
   }
 
-
   .info {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 100px 1fr 1fr;
-    grid-template-areas: "titulo titulo"
-    "tiempo tasas"
-    "compara confiable";
+    grid-template-areas:
+      "titulo titulo"
+      "tiempo tasas"
+      "compara confiable";
   }
 
   .info__card {

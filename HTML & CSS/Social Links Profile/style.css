@@ -1,0 +1,92 @@
+:root {
+  --colorPrimario: hsl(75, 94%, 57%);
+  --White: hsl(0, 0%, 100%);
+  --Grey: hsl(0, 0%, 20%);
+  --Dark-Grey: hsl(0, 0%, 12%);
+  --Off-Black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  background-color: var(--Off-Black);
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* Contenedor Principal */
+
+.contenedor {
+  width: 260px;
+  height: 460px;
+  background-color: var(--Dark-Grey);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Información del Contenedor */
+
+.contenedor__img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 10px;
+}
+
+.contenedor__nombre {
+  color: var(--White);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.contenedor__localidad {
+  color: var(--colorPrimario);
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.contenedor__parrafo {
+  color: var(--White);
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.social {
+  display: block;
+  text-decoration: none;
+  color: var(--White);
+  font-size: 0.9rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px 0;
+  background-color: var(--Grey);
+  border-radius: 10px;
+  margin: 10px 0;
+
+  transition: background-color 0.2s;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--colorPrimario);
+    color: var(--Off-Black);
+  }
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--White);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
